@@ -1,7 +1,7 @@
 provider "aws" {
 
   region  = "ap-northeast-2"
-  profile = "facam"
+  profile = "yhdc"
 
   access_key = ""
   secret_key = ""

@@ -18,7 +18,7 @@ pipeline {
         stage ('Maven Build') {
             steps {
                 sh  """
-                    cd facam-backend
+                    cd yhdc-backend
                     mvn clean
                     mvn package 
                     """
@@ -33,7 +33,7 @@ pipeline {
 
                     sh  """
                         git clone https://github.com/yhdc/ansible-aws.git
-                        cd  facam-ansible 
+                        cd  yhdc-ansible
 
                         sed -i 's/MY_KEYPAIR_NAME/${MY_KEYPAIR_NAME}/g' hosts/hosts
                         sed -i 's/MY_APP_PRIVATE_IP/${MY_APP_PRIVATE_IP}/g' hosts/hosts
